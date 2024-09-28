@@ -1,1 +1,10 @@
-
+Question 6.1:
+- If users choose "Cancel", it returns "You've chosen: No".
+- We can use "showOptionDialog" instead of "showConfirmDialog" like the following example:
+    public static void main(String[] args) {
+	      String[] a = {"I do", "I don't"};
+	      int option = JOptionPane.showOptionDialog(null, "Choose the answer ", "Message", 
+	                    JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, a, a[0]);
+	      JOptionPane.showMessageDialog(null, "You've chosen: " + a[option]);
+	      System.exit(0);
+	}
