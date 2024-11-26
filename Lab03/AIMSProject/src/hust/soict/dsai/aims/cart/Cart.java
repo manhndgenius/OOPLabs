@@ -36,7 +36,7 @@ public class Cart {
 		if (currentorder + 2 <= MAX_NUMBER_ORDERED) {
 			itemsOrdered[currentorder] = dvd1;
 			currentorder++;
-			itemsOrdered[currentorder + 1] = dvd2;
+			itemsOrdered[currentorder] = dvd2;
 			currentorder++;
 			System.out.println("Both disc have been added!");
 		} else if (currentorder + 1 <= MAX_NUMBER_ORDERED) {
