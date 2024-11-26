@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Cart {
 	public static final int MAX_NUMBER_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
@@ -106,7 +109,7 @@ public class Cart {
 		}
 		
 		System.out.println("Total cost: " + this.totalCost() + " $");
-		System.out.println("***************************************************");
+		System.out.println("**************************************************");
 	}
 	
 	public void search(int id) {
