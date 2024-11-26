@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class GarbageCreator {
+public class NoGarbage {
     public static void main(String[] args) throws IOException {
         String filepath = "C:\\Users\\ADmin\\Documents\\large_input.txt";
         byte[] inputBytes = {0};
@@ -12,10 +12,9 @@ public class GarbageCreator {
 
         inputBytes = Files.readAllBytes(Paths.get(filepath));
         startTime = System.currentTimeMillis();
-        String outputString = "";
-
+        StringBuilder outputString = new StringBuilder();
         for (byte b : inputBytes) {
-            outputString += (char)b;
+            outputString.append(b);
         }
         endTime = System.currentTimeMillis();
         System.out.println(endTime - startTime);
