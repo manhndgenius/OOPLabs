@@ -1,3 +1,4 @@
+package hust.soict.dsai.aims.disc;
 public class DigitalVideoDisc {
 	private String title;
 	private String category;
@@ -20,7 +21,7 @@ public class DigitalVideoDisc {
 		return director;
 	}
 	
-	public int getLenght() {
+	public int getLength() {
 		return lenght;
 	}
 	
