@@ -120,7 +120,7 @@ public class Cart {
 
             if (itemsOrdered[i].isMatch(id)) {
 
-                System.out.print("Found: " + (i + 1) + ". DVD - ");
+                System.out.print("Found: " + i + ". DVD - ");
 
                 if (itemsOrdered[i].getTitle() != null) {
                     System.out.print(itemsOrdered[i].getTitle() + " - ");
