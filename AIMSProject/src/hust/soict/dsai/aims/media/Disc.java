@@ -3,38 +3,27 @@ package hust.soict.dsai.aims.media;
 public class Disc extends Media {
 	private int length;
 	private String director;
-	
-	public int getLength() {
-		return length;
+
+	public Disc() {
+		this.length = 0;
+		this.director = "";
+	}
+	public Disc(int id, String title, String category, float cost, String director, int length) {
+		super(id, title, category, cost);
+		this.director = director;
+		this.length = length;
 	}
 
-	public void setLength(int length) {
-		this.length = length;
+	public int getLength() {
+		return length;
 	}
 
 	public String getDirector() {
 		return director;
 	}
 
-	public void setDirector(String director) {
-		this.director = director;
-	}
-
-	public Disc(int id, String title, String category, float cost, int length, String director) {
-		// TODO Auto-generated constructor stub
-		super(id, title, category, cost);
-		this.length = length;
-		this.director = director;
-	}
-	
-	public void play() {
-		System.out.println("Playing Disc: " + this.getTitle());
-        System.out.println("Disc length: " + this.getLength());
-	}
-	
+	@Override
 	public String toString() {
-		return "ID: " + this.getId() + "\nTitle: " + this.getTitle() + "\nCategory: " 
-				+ this.getCategory() + "\nCost: " + this.getCost() + "\nLength" 
-				+ this.getLength() + "\nDirector: " + this.getDirector() + ".";
-	}
+		return "Disc" + "-" + this.getTitle() + "-" + this.getCategory() + "-" + this.getDirector() + "-" + String.valueOf(this.getLength()) + ": " + String.valueOf(this.getCost()) + "$";
+	};
 }

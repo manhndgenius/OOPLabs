@@ -2,8 +2,10 @@ package hust.soict.dsai.test.cart;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
+import javax.naming.LimitExceededException;
+
 public class CartTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws LimitExceededException {
 		//Create a new cart
 		Cart cart = new Cart();
 		
@@ -20,9 +22,8 @@ public class CartTest {
 				"Animation", 18.99f);
 		cart.addMedia(dvd3);
 		
-		cart.search("The lion king");
-		cart.search(1);
-		cart.search("Aladin");
-		cart.search(5);
+		cart.searchByTitle("Aladin");
+	    cart.searchById(1);
+	    cart.searchById(10);
 	}
 }
